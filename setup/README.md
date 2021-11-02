@@ -7,7 +7,7 @@ Install instructions will vary a little depending on whether you're on a Mac or 
 ## Windows install:
 ### R
 - navigate to https://cran.r-project.org/bin/windows/base/
-- Click 'Download R 4.1.1 for Windows'
+- Click `Download R 4.1.1 for Windows`
 - Run the installer
 - Test your installation by launching R from the Start Menu
 
@@ -21,9 +21,10 @@ Install instructions will vary a little depending on whether you're on a Mac or 
 ## Mac install:
 ### R
 - navigate to https://cran.r-project.org/bin/macosx/base/
-- download R-4.1.1.pkg
+- download `R-4.1.1.pkg`
 - double-click the package to install once it's downloaded, and choose default install options unless you have specific reasons not to
 - verify the install has been successful by opening a terminal and typing 'R' -- this should print details of the R version you are running
+- `print("Hello World")` just for fun!
 
 ### RStudio
 - navigate to https://rstudio.com/products/rstudio/download/
