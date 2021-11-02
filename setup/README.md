@@ -17,6 +17,7 @@ Install instructions will vary a little depending on whether you're on a Mac or 
 - download RStudio Desktop for Windows
 - run the installer once downloaded, keep default options unless otherwise required
 - test your installation by launching RStudio from the start menu
+- `print("Hello World")` just for fun!
 
 ## Mac install:
 ### R
