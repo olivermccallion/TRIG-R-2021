@@ -1,0 +1,69 @@
+---
+title: "R Practice"
+author: "Amy Cross"
+date: "06/11/2021"
+output: html_document
+---
+
+### Markdown set-up
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#Set working directory to wherever you are saving this markdown. Use setwd() or the Session tab > Set working directory > Choose directory and copy code from console here
+setwd("D:/R tutorials")
+```
+
+### Load practice data
+
+The 'Example flow data.csv' is cell population frequencies I exported from a flow cytometry experiment. 
+
+```{r load data}
+#Upload cell population frequencies that I created in FlowJo and we'll name the variable 'freq'
+freq <- read.csv("Example flow data.csv", check.names = FALSE)
+
+#Open freq in the environment and have a look at it. Each row represents a mouse.  Try to upload the data with check.names as TRUE or FALSE - what is the difference?
+
+#What is this data structure.  Use str().
+
+#What is in each column? Check the environment. Use colnames().  What data structure does colnames() produce? 
+
+```
+### Tidy up the data
+
+```{r rename the columns and rows}
+#The column names are long and confusing.  Rename them.  Use colnames() as a variable and assign a new vector of shorter names.  Check it has worked. 
+simple_colnames <- c("", "% non-Treg", "% Prolif in non-Treg", "% Non-prolif in non-Treg", "% Treg", "% Prolif in Treg", "% Non-prolif in Treg", "% CD8+", "% Prolif in CD8+", "% Non-prolif in CD8+")
+colnames(freq) <-
+
+#Rows are currently labelled automatically by order.  Change the rownames to correspond to the mouse identifier/fcs file.  Use rownames() as a variable and assign the mouse identifier column (use []) to it.  Check it has worked.
+
+
+#We don't need the mouse identifier column anymore. Create a new freq_new dataframe by subsetting the freq dataframe. Use [] by boolean or ordering.
+freq_clean <- 
+
+```
+
+### Great, now we can begin to explore the data
+
+```{r look at summary statistics}
+#Get the summary statistics of the dataframe. Use summary()
+
+
+#Find the standard deviation of the % treg columnn. Use $ and sd() 
+
+```
+
+```{r use plot to look for outliers}
+#See if you have any outliers. Use plot()
+
+```
+
+If you found outliers, then you would write it down in the R markdown workbook and then look back at the raw data in flowjo to understand whether this is a biological finding, an analysis issue or a technical issue.  Should this mouse be excluded?   This makes your decision process clear and can track it when you come back to this data in the future.
+
+```{r remove outlier by subsetting}
+#Make a new dataframe called freq_no_outliers where you remove the outlier(s) from freq_clean by subsetting the dataframe. Use [] by order or logical.
+freq_no_outliers <- 
+```
+
+
